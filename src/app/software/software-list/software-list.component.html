@@ -82,6 +82,7 @@
               <th scope="col">#</th>
               <th scope="col">EMPNO</th>
               <th scope="col">EMPNAME</th>
+              <th scope="col">EMPNAME(唯讀)</th>
               <th scope="col">BLOODTYPE</th>
               <th scope="col"><button class="btn btn-warning" (click)="onArrayAddRow()">+</button></th>
             </tr>
@@ -97,6 +98,7 @@
               </td>
               <td> <input type=" text" class="form-control" formControlName="EMPNO"></td>
               <td> <input type="text" class="form-control" formControlName="EMPNAME"></td>
+              <td>{{getArrayRowField(index, "EMPNAME").value}}</td>
               <td><select class="form-control" formControlName="BLOODTYPE">
                   <option>A</option>
                   <option>B</option>
